@@ -1,0 +1,155 @@
+html {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background-color: #f0f1f6;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.align_center {
+  text-align: center;
+}
+
+.align_left {
+  text-align: left;
+}
+
+.align_right {
+  text-align: right;
+}
+
+.ofh {
+  overflow: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.m_auto {
+  margin: auto;
+}
+
+.width_100 {
+  width: 100%;
+}
+
+.height_100 {
+  height: 100%;
+}
+
+.nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.d_box {
+  display: flex;
+  box-sizing: border-box;
+  flex: 1;
+  width: 100%;
+}
+
+.d_boxflex {
+  flex: 1;
+  display: block;
+}
+.flex-xcs {
+  display: flex;
+  flex-direction: row;
+   align-items: flex-start;
+  justify-content: center;
+} 
+.flex-ycs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+} 
+.flex-ysc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+} 
+.flex-xsc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+} 
+.flex-y {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  justify-content:center;
+} 
+.flex-x {
+
+  display: flex;
+  flex-direction: row;
+   align-items: center;
+  justify-content: center;
+}
+.flex-ys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+} 
+.flex-xs {
+  display: flex;
+  flex-direction: row;
+   align-items: center;
+  justify-content: start;
+} 
+.flex-xss {
+  display: flex;
+  flex-direction: row;
+   align-items: flex-start;
+  justify-content: start;
+} 
+.flex-xb {
+  display: flex;
+  flex-direction: row;
+   align-items: center;
+  justify-content:space-between;
+} 
+.pointer{
+  cursor:pointer;
+}
+.flex-1{
+  flex:1;
+}
+.flex-2{
+  flex:2;
+}
+.flex-3{
+  flex:3;
+}
+.flex-4{
+  flex:4;
+}

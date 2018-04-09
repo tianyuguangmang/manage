@@ -1,0 +1,231 @@
+<view class="bg">
+
+	<view class="my-message" style="height: 320rpx;">
+		<div class="bg-img-box" style="height: 320rpx;">
+			<image src="{{'../../images/pic_gr_bg.png'}}" mode="scaleToFill" />
+		</div>
+		<!--<div class="my-protrait-box">
+		<block wx:if="{{userBaseInfo.avatarUrl}}">
+		<image class="my-protrait" src="{{userBaseInfo.avatarUrl}}"/>
+		</block>
+	</div>-->
+
+		<div class="person flex-x" style="position: relative;height: 320rpx;">
+			<image src="{{userBaseInfo.avatarUrl}}" mode="aspectFill" style="width:140rpx;height: 140rpx;margin: 0 20rpx;border: 6rpx solid #fff;border-radius: 50%;" />
+			<div class="person-con flex-1 flex-y" style="height: 120rpx;align-items: flex-start;color: #fff;">
+				<view class="flex-x flex-1" style="font-size: 28rpx;align-items: flex-start;">{{userBaseInfo.nickName}}</view>
+				<view class="myPrice  flex-x" style="font-size: 28rpx;align-items: flex-start;" bindtap="toVip">
+					<image src="{{myInfo.menberGrade}}" mode="scaleToFill" style="width: 173rpx;height: 66rpx;" />
+					<!--<view class="color-w">￥{{myInfo.totalAmount}}</view>-->
+				</view>
+			</div>
+			<navigator url="/pages/address/address?from=my" style="position: relative;right: 0;top:20rpx;" hover-class="none">
+				<image src="../../images/pic_adress.png" style="height: 80rpx;width: 220rpx;" mode="scaleToFill	" />
+				<view class="color-w" style="position: absolute;top:20rpx;right: 15rpx;font-size: 32rpx;">收货地址</view>
+			</navigator>
+			<navigator url="/pages/toshare/toshare" hover-class="none" style="position: absolute;right: 0;top:70%;" wx:if="{{myInfo.redPacket!=0}}">
+				<image src="../../images/pic_hb.png" style="height: 80rpx;width: 175rpx;" mode="aspectFit" />
+			</navigator>
+		</div>
+
+		<!--<div class="my-name">{{userBaseInfo.nickName}}</div>-->
+	</view>
+	<view class="my-sub-title">
+
+		<navigator class=" flex-x my-order bg-w" url="/pages/myorder/myorder?id=1&from='pt'" hover-class="none">
+			<view class="bottom-line flex-x">
+				<!-- <div class="order-img-box flex-x"><image src="../../images/my_icon_03.png"/></div> -->
+
+				<div class="title flex-1">我的订单</div>
+				<view class="new-msg" hidden="{{msgCount.orderNum>0?false:true}}"><span class="new-msg-value">{{msgCount.orderNum}}</span>条</view>
+				<div class="check-all-order">查看全部订单</div>
+				<div class="right-icon-box flex-x">
+					<image src="../../images/right-icon_10.png" />
+				</div>
+			</view>
+		</navigator>
+		<view class="order-menu flex-x">
+			<navigator class="order-item flex-y flex-1" url="/pages/myorder/myorder?id=2" hover-class="none">
+				<div class="order-icon-box">
+					<image src="../../images/order-icon_03.png" />
+				</div>
+				<div class="order-title">
+					待付款
+				</div>
+			</navigator>
+			<navigator class="order-item flex-y flex-1" url="/pages/myorder/myorder?id=3" hover-class="none">
+				<div class="order-icon-box">
+					<image src="../../images/order-icon_05.png" />
+				</div>
+				<div class="order-title">
+					待发货
+				</div>
+			</navigator>
+			<navigator class="order-item flex-y flex-1" url="/pages/myorder/myorder?id=4" hover-class="none">
+				<div class="order-icon-box">
+					<image src="../../images/order-icon_07.png" />
+				</div>
+				<div class="order-title">
+					待收货
+				</div>
+			</navigator>
+			<navigator class="order-item flex-y flex-1" url="/pages/myorder/myorder?id=5" hover-class="none" wx:if="{{isRefund==0}}">
+				<div class="order-icon-box">
+					<image src="../../images/order-icon_09.png" />
+				</div>
+				<div class="order-title">
+					已完成
+				</div>
+			</navigator>
+			<navigator class="order-item flex-y flex-1" url="/pages/myorder/myorder?id=5" hover-class="none" wx:else>
+				<div class="order-icon-box">
+					<image src="../../images/order-evaluate.png" />
+				</div>
+				<div class="order-title">
+					待评价
+				</div>
+			</navigator>
+			<navigator class="order-item flex-y flex-1" url="/pages/myRefundOrder/myRefundOrder" hover-class="none" wx:if="{{isRefund==1}}">
+				<div class="order-icon-box">
+					<image src="../../images/order-refund.png" />
+				</div>
+				<div class="order-title">
+					退款/维权
+				</div>
+			</navigator>
+		</view>
+		<!--<navigator class="sub-title flex-x" url="/pages/address/address?from=my" hover-class="none">
+			<div class="order-img-box flex-x">
+				<image src="../../images/shop_10.png" />
+			</div>
+			<div class="title flex-1">收货地址</div>
+			<view class="new-msg" hidden="{{msgCount.orderNum>0?false:true}}"><span class="new-msg-value">{{msgCount.orderNum}}</span>条</view>
+			<div class="right-icon-box flex-x">
+				<image src="../../images/right-icon_10.png" />
+			</div>
+		</navigator>-->
+
+		<!-- 	<view class="sub-title flex-x" bindtap="scanWXCode">
+	<div class="order-img-box flex-x"><image src="../../images/my_icon_08.png"/></div>
+	<div class="title flex-1">到店支付</div>
+	<div class="right-icon-box flex-x">
+		<image src="../../images/right-icon_10.png"/>
+	</div>
+</view> -->
+		<navigator class="sub-title flex-x" url="/pages/accountsafe/accountsafe">
+			<div class="order-img-box flex-x">
+				<image src="../../images/icon_aq.png" />
+			</div>
+			<div class="title flex-1">账户安全</div>
+			<div class="right-icon-box flex-x">
+				<image src="../../images/right-icon_10.png" />
+			</div>
+		</navigator>
+		<button class="sub-title flex-x" bindtap="toMyPackage">
+		<div class="order-img-box flex-x"><image src="../../images/icon_qb.png"/></div>
+		<div class="title flex-1">我的钱包</div>
+		<view class="color-r" wx:if="{{myInfo.totalAmount}}">￥{{myInfo.totalAmount}}</view>
+		<div class="right-icon-box flex-x">
+			<image src="../../images/right-icon_10.png"/>
+		</div>
+	</button>
+		<block wx:if="{{myInfo.distribution!=0&&myInfo.group!=0}}">
+			<navigator class="sub-title flex-x" url="/pages/myCount/myCount" style="margin-top: 0;border-top: none;">
+				<div class="order-img-box flex-x">
+					<image src="../../images/icon_jf.png" />
+				</div>
+				<div class="title flex-1">我的积分</div>
+				<view class="color-r">{{myInfo.score}}</view>
+				<div class="right-icon-box flex-x">
+					<image src="../../images/right-icon_10.png" />
+				</div>
+			</navigator>
+		</block>
+		<button class="sub-title flex-x" open-type="contact">
+		<div class="order-img-box flex-x"><image src="../../images/my_icon_10.png"/></div>
+		<div class="title flex-1">客服中心</div>
+		<div class="right-icon-box flex-x">
+			<image src="../../images/right-icon_10.png"/>
+		</div>
+	</button>
+		<button class="sub-title flex-x" bindtap="toMyGroup" wx:if="{{myInfo.group!=0}}">
+		<div class="order-img-box flex-x"><image src="../../images/icon_pt.png"/></div>
+		<div class="title flex-1">我的拼团</div>
+		<div class="right-icon-box flex-x">
+			<image src="../../images/right-icon_10.png"/>
+		</div>
+	</button>
+		<button class="sub-title flex-x" bindtap="toCenter" style="margin-top: 0;border-top: none;" wx:if="{{myInfo.distribution!=0&&myInfo.group!=0}}">
+		<div class="order-img-box flex-x"><image src="../../images/icon_fx.png"/></div>
+		<div class="title flex-1">分销中心</div>
+		<div class="right-icon-box flex-x">
+			<image src="../../images/right-icon_10.png"/>
+		</div>
+	</button>
+		<button class="sub-title flex-x" bindtap="toCenter" style="" wx:if="{{myInfo.distribution!=0&&myInfo.group==0}}">
+		<div class="order-img-box flex-x"><image src="../../images/icon_fx.png"/></div>
+		<div class="title flex-1">分销中心</div>
+		<div class="right-icon-box flex-x">
+			<image src="../../images/right-icon_10.png"/>
+		</div>
+	</button>
+		<button class="sub-title flex-x" bindtap="toMyCoupon" wx:if="{{myInfo.coupon!=0}}">
+		<div class="order-img-box flex-x"><image src="../../images/icon_yhq.png"/></div>
+		<div class="title flex-1">我的优惠券</div>
+		<div class="right-icon-box flex-x">
+			<image src="../../images/right-icon_10.png"/>
+		</div>
+	</button>
+	
+	
+
+
+		<navigator class="sub-title flex-x" url="/pages/myLuckList/myLuckList" style="margin-top: 0;border-top: none;" wx:if="{{myInfo.lottery!=0}}">
+			<div class="order-img-box flex-x">
+				<image src="../../images/icon_cj.png" />
+			</div>
+			<div class="title flex-1">我的抽奖</div>
+			<div class="right-icon-box flex-x">
+				<image src="../../images/right-icon_10.png" />
+			</div>
+		</navigator>
+
+	<view class="sub-title flex-x" bindtap="openShopAddress" hover-class="none">
+		<div class="order-img-box flex-x">
+			<image src="../../images/pic_menh.png" style="width:44rpx;height:38rpx;" />
+		</div>
+		<div class="title flex-1">门店地址</div>
+		<view class="new-msg" hidden="{{msgCount.orderNum>0?false:true}}"><span class="new-msg-value">{{msgCount.orderNum}}</span>条</view>
+		<div class="right-icon-box flex-x">
+			<image src="../../images/right-icon_10.png" />
+		</div>
+	</view>
+	<navigator class="sub-title flex-x" url="/pages/bargainlist/bargainlist" wx:if="{{myInfo.bargain!=0}}">
+		<div class="order-img-box flex-x"><image src="../../images/icon_kj.png"/></div>
+		<div class="title flex-1">我的砍价</div>
+		<div class="right-icon-box flex-x">
+			<image src="../../images/right-icon_10.png"/>
+		</div>
+	</navigator>
+
+		<!--<navigator class="sub-title flex-x" url="/pages/toshare/toshare" hover-class="none">
+			<div class="order-img-box flex-x">
+				<image src="../../images/shop_10.png" />
+			</div>
+			<div class="title flex-1">红包详情</div>
+			<view class="new-msg" hidden="{{msgCount.orderNum>0?false:true}}"><span class="new-msg-value">{{msgCount.orderNum}}</span>条</view>
+			<div class="right-icon-box flex-x">
+				<image src="../../images/right-icon_10.png" />
+			</div>
+		</navigator>-->
+
+		<!-- <navigator class="sub-title flex-x" url="/pages/couponlist2/couponlist2">
+	 		<div class="order-img-box flex-x"><image src="../../images/my_icon_12.png"/></div>
+	 		<div class="title flex-1">优惠券</div>
+	 		<view class="new-msg" hidden="{{msgCount.couponNum>0?false:true}}"><span class="new-msg-value">{{msgCount.couponNum}}</span>条</view>
+	 		<div class="right-icon-box flex-x">
+	 			<image src="../../images/right-icon_10.png"/>
+	 		</div>
+	 	</navigator>  -->
+	</view>
+</view>

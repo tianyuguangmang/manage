@@ -1,0 +1,204 @@
+.my-message{
+	height: 300rpx;
+	width:100%;
+	position: relative;
+}
+.my-message .bg-img-box{
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width:100%;
+	height: 300rpx;
+}
+.bg-img-box image{
+	height: 100%;
+	width:100%;
+}
+.my-protrait-box
+{
+	position: absolute;
+	top:40rpx;
+	left: 290rpx;
+	width:160rpx;
+	box-sizing: content-box;
+	height: 160rpx;
+	border-radius: 85rpx;
+	border:5rpx solid #fff;
+	text-align: center;
+
+
+}
+.my-protrait-box .my-protrait{
+	width:160rpx;
+	height: 160rpx;
+	border-radius: 80rpx;
+	background: #fff;
+
+}
+
+.my-name{
+	width:100%;
+	position: absolute;
+	top:230rpx;
+	text-align: center;
+	font-size:30rpx;
+	color:#fff;
+
+}
+.my-sub-title{
+	
+	/*border-top: 20rpx solid #fff;*/
+	
+	margin-bottom: 20rpx;
+}
+.sub-title{
+	height:110rpx;
+	width:100%;
+	border-radius: 0px;
+	background: #fff;
+	margin:0px;
+	padding:0px;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: left;
+	margin-top: 14rpx;
+	background: #fff;
+	font-size:32rpx;
+}
+.sub-title .title{
+	font-weight: bold;
+}
+.order-img-box{
+	width:80rpx;
+}
+.order-img-box image{
+	width:50rpx;
+	height: 45rpx;
+}
+.right-icon-box{
+	width:70rpx;
+}
+.right-icon-box image{
+	width:27rpx;
+	height: 35rpx;
+}
+.my-coupon{
+	width:100%;
+}
+.coupon-list{
+	width:100%;
+	height: 100%;
+	position: relative;
+}
+.coupon-item{
+	position: relative;
+	margin-top: 20rpx;
+	height: 210rpx;
+	width:650rpx;
+}
+.coupon-item .coupon-bg{
+	position: absolute;
+	width:100%;
+	height: 100%;
+}
+.coupon-item .shop-protrait{
+	position: absolute;
+	left:48rpx;
+	top:15rpx;
+	width:78rpx;
+	height: 78rpx;
+	background: #fff;
+	border-radius: 39rpx;
+	border:1px solid #ccc;
+
+}
+.shop-protrait image{
+	width:78rpx;
+	height: 78rpx;
+	border-radius: 39rpx
+}
+.coupon-item .shop-name{
+	position: absolute;
+	left:150rpx;
+	top:35rpx;
+}
+.coupon-item .coupon-msg{
+	position: absolute;
+	left:230rpx;
+	top: 96rpx;
+
+}
+.coupon-item .btn{
+	height: 200rpx;
+	width:190rpx;
+	position: absolute;
+	right:0px;
+	top:0px;
+	
+}
+.btn-content{
+	width:80rpx;
+	height: 80rpx;
+	font-size:30rpx;
+	color:#fff;
+	line-height: 40rpx;
+}
+.new-msg-value{
+	color:#ff3c42;
+	margin-right:6rpx;
+}
+.new-msg{
+	
+	color:#959595;
+}
+.my-order{
+	margin-bottom: 0rpx;
+	border-bottom:0px solid #fff;
+
+	
+	border-top: 1px solid #e5e5e5;
+}
+.bottom-line{
+	width:96%;
+	height:110rpx;
+	
+	border-bottom: 1px solid #e5e5e5;
+	background: #fff;
+	margin:0px;
+	padding:0px;
+	
+	text-align: left;
+	margin-top: 14rpx;
+	
+	font-size:32rpx;
+	
+}
+.my-order .title{
+	margin-left: 30rpx;
+}
+.order-menu{
+	width:100%;
+	margin-bottom: 22rpx;
+	background: #fff;
+	border-bottom: 1rpx solid #e5e5e5;
+	padding:50rpx 0rpx 30rpx 0rpx;
+}
+.order-icon-box{
+	width:63rpx;
+	height: 53rpx;
+}
+.order-icon-box image{
+	width:63rpx;
+	height: 53rpx;
+}
+.order-title{
+	font-size:28rpx;
+	width:100%;
+	height: 50rpx;
+	line-height: 50rpx;
+	text-align: center;
+}
+.check-all-order{
+	color:#666666;
+	font-size:28rpx;
+}
